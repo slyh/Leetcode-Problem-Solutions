@@ -45,7 +45,7 @@ Input: `[[1,2],[1,3],[2,3]]` | Input: `[[3,1],[1,4],[4,2],[2,1]]` | Input: `[[2,
 
 # Code
 
-`
+```javascript
 /**
  * @param {number[][]} edges
  * @return {number[]}
@@ -102,4 +102,4 @@ var findRedundantDirectedConnection = function(edges) {
     // A node has two parents, the edge to first parent forms cycle. (Solve it by hand case 3)
     return [parents[node][0], node];
 };
-`
+```
