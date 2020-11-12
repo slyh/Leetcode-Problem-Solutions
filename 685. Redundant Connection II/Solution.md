@@ -24,7 +24,7 @@
 1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Solve it by hand case 2)](#solve-it-by-hand)
 1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Solve it by hand case 3)](#solve-it-by-hand)
 
-# Cases
+## Cases
 
 Case 1 | Case 2 | Case 3
 -------|--------|-------
