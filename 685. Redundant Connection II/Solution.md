@@ -20,9 +20,9 @@
 
 1. Find if any edge will construct a cycle by union find. If an edge will form a cycle, store that edge and **ignore it in step 2**.
 1. Find if any node has two parents.
-1. If a node has two parents and no cycle found, the edge from the second parent to that node is redundant. [(Solve it by hand case 1)](#solve-it-by-hand)
-1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Solve it by hand case 3)](#solve-it-by-hand)
-1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Solve it by hand case 2)](#solve-it-by-hand)
+1. If a node has two parents and no cycle found, the edge from the second parent to that node is redundant. [(Example 1)](#solve-it-by-hand)
+1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Example 3)](#solve-it-by-hand)
+1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Example 2)](#solve-it-by-hand)
 
 ## Cases
 
@@ -36,9 +36,9 @@ In case 2, both node 3 and 4 have no parent which mean there are two root nodes.
 
 By removing the edge from node 2 to node 1 in case 1, the tree becomes valid and is shown in case 3.
 
-# Solve it by hand
+# Examples
 
-Case 1 | Case 2 | Case 3
+Example 1 | Example 2 | Example 3
 -------|--------|-------
 Input: `[[1,2],[1,3],[2,3]]` | Input: `[[3,1],[1,4],[4,2],[2,1]]` | Input: `[[2,1],[4,2],[1,4],[3,1]]`
 ![Case 1](assets/solve_by_hand_1.png) | ![Case 2](assets/solve_by_hand_2.png) | ![Case 3](assets/solve_by_hand_3.png)
@@ -89,17 +89,17 @@ var findRedundantDirectedConnection = function(edges) {
     // Check if any node has two parents
     const node = parents.findIndex(e => e.length > 1);
     
-    // No node have two parents, cycleEdge is the edge that forms cycle. (Solve it by hand case 2)
+    // No node have two parents, cycleEdge is the edge that forms cycle. (Example 2)
     if (node === -1) {
         return cycleEdge;
     }
     
-    // A node has two parents, the edge to second parent is redundant. (Solve it by hand case 1)
+    // A node has two parents, the edge to second parent is redundant. (Example 1)
     if (cycleEdge === null) {
         return [parents[node][1], node];
     }
     
-    // A node has two parents, the edge to first parent forms cycle. (Solve it by hand case 3)
+    // A node has two parents, the edge to first parent forms cycle. (Example 3)
     return [parents[node][0], node];
 };
 ```
