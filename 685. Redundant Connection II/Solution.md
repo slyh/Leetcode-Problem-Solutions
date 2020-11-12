@@ -21,8 +21,8 @@
 1. Find if any edge will construct a cycle by union find. If an edge will form a cycle, store that edge and **ignore it in step 2**.
 1. Find if any node has two parents.
 1. If a node has two parents and no cycle found, the edge from the second parent to that node is redundant. [(Example 1)](#examples)
-1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Example 3)](#examples)
-1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Example 2)](#examples)
+1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Example 2)](#examples)
+1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Example 3)](#examples)
 
 ## Cases
 
