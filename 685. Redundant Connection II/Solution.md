@@ -14,15 +14,15 @@
 
 * The given graph is an invalid rooted tree graph with one redundant edge. The tree becomes valid after removing the redundant edge.
 * If there are multiple choices to remove, choose the one that is added last.
-* The order of edges is important (for solving the problem in the following way).
+* The order of edges is important (for solving the problem in the following way, see [example 2 and 3](#examples)).
 
 ## Steps
 
 1. Find if any edge will construct a cycle by union find. If an edge will form a cycle, store that edge and **ignore it in step 2**.
 1. Find if any node has two parents.
-1. If a node has two parents and no cycle found, the edge from the second parent to that node is redundant. [(Example 1)](#solve-it-by-hand)
-1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Example 3)](#solve-it-by-hand)
-1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Example 2)](#solve-it-by-hand)
+1. If a node has two parents and no cycle found, the edge from the second parent to that node is redundant. [(Example 1)](#examples)
+1. If a node has two parents and a cycle is found, the edge from the first parent to that node formed the cycle. [(Example 3)](#examples)
+1. If no node has two parents, the edge that formed a cycle is the redundant edge. [(Example 2)](#examples)
 
 ## Cases
 
