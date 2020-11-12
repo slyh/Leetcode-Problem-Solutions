@@ -42,6 +42,8 @@ Example 1 | Example 2 | Example 3
 -------|--------|-------
 Input: `[[1,2],[1,3],[2,3]]` | Input: `[[3,1],[1,4],[4,2],[2,1]]` | Input: `[[2,1],[4,2],[1,4],[3,1]]`
 ![Case 1](assets/solve_by_hand_1.png) | ![Case 2](assets/solve_by_hand_2.png) | ![Case 3](assets/solve_by_hand_3.png)
+Output: `[2,3]` | Output: `[2,1]` | Output: `[2,1]`
+Edge `[2,3]` is the edge that makes node 3 has two parents. | No node has two parents but the edge `[2,1]` is trying to form a cycle. | Edge `[1,4]` is trying to form a cycle and a node has two parent. The edge that connecting node 1 to its first parent(edge `[2,1]`) is redundant and is a part of cycle in input graph.
 
 # Code
 
