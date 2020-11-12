@@ -30,7 +30,7 @@ Case 1 | Case 2 | Case 3
 -------|--------|-------
 ![Case 1](assets/case1.png) | ![Case 2](assets/case2.png) | ![Case 3](assets/case3.png)
 
-Case 1 is invalid since node 1 has two parents. After removing the edge from node 1 to node 4, it becomes case 2.
+Case 1 is invalid since node 1 has two parents. After removing the edge from node 1 to node 4, it becomes case 2 but it's still an invalid tree.
 
 In case 2, both node 3 and 4 have no parent which mean there are two root nodes. Also, node 1 still has two parents.
 
